@@ -1,4 +1,4 @@
-export default function Signup () {
+export function Signup () {
     return (
         <div>Sigup</div>
     )
