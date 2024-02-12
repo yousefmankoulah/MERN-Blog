@@ -17,6 +17,19 @@ mongoose.connect(process.env.MONGO_URL).then(() => {
 const app = express()
 app.listen(3000, () => console.log('Listening on port 3000'))
 
+const allowedOrigins = ['https://zany-adventure-vr7pwrvvvvfx6xx-5174.app.github.dev/', 'https://zany-adventure-vr7pwrvvvvfx6xx-3000.app.github.dev']; // Add your allowed hosts here
+
+// Use cors middleware with specific origin
+app.use(cors({
+  origin: function (origin, callback) {
+    // Check if the request origin is in the allowed list
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 app.use(express.json())
 
 //routes
