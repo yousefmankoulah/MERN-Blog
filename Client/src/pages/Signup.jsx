@@ -23,6 +23,7 @@ export function Signup () {
             setLoading(true)
             setErrorMessage(null)
             const res = await fetch('https://zany-adventure-vr7pwrvvvvfx6xx-3000.app.github.dev/api/auth/signup', {
+            
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body:JSON.stringify(formData)
