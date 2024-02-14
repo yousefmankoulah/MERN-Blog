@@ -20,7 +20,7 @@ export function OAuth () {
         try {
             const resultsFromGoogle = await signInWithPopup(auth, provider)
             const res = await fetch('https://zany-adventure-vr7pwrvvvvfx6xx-3000.app.github.dev/api/auth/google', {
-                
+                mode: 'no-cors',
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body:JSON.stringify({

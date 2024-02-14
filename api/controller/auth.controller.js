@@ -24,7 +24,6 @@ export const signup = async (req, res, next) => {
     
     try{
         await newUser.save()
-        // res.header('Access-Control-Allow-Origin', "https://zany-adventure-vr7pwrvvvvfx6xx-5173.app.github.dev");
         res.json('User created successfully')
 
     } catch(err){
