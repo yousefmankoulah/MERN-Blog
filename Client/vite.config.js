@@ -7,7 +7,7 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'https://zany-adventure-vr7pwrvvvvfx6xx-3000.app.github.dev',
-        secure: false,
+        secure: true,
       },
     }
   },

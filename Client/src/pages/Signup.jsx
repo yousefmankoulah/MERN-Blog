@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { OAuth } from '../components/OAuth'
 
+
 export function Signup () {
 
     const [formData, setFormData] = useState({})
@@ -24,7 +25,7 @@ export function Signup () {
             setLoading(true)
             setErrorMessage(null)
             const res = await fetch('https://zany-adventure-vr7pwrvvvvfx6xx-3000.app.github.dev/api/auth/signup/', {
-                mode: 'no-cors',
+                // mode: 'no-cors',
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body:JSON.stringify(formData)

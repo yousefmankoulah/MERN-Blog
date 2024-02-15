@@ -29,7 +29,7 @@ export function Signin () {
             dispatch(signInStart())
            
             const res = await fetch('https://zany-adventure-vr7pwrvvvvfx6xx-3000.app.github.dev/api/auth/signin/', {
-                mode: 'no-cors',
+                // mode: 'no-cors',
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body:JSON.stringify(formData)
